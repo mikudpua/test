@@ -8,6 +8,7 @@ pipeline {
                sh '''
                docker --version
                ls -la
+               hostname
                '''
               }
             }
