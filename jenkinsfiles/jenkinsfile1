@@ -7,9 +7,14 @@ pipeline {
             steps {
                 echo " ============== start building image =================="
                 dir ('docker/images') {
-                	sh 'docker build . '
-                }
+                	sh 'docker build -t my-php-app . '
+             }
+        }
+        stage("run container"){
+            steps{
+            echo " ============== run container =================="
+            sh 'docker run -it --rm --name my-running-app my-php-app'
             }
         }
-      }
-    }
+     }
+ }
