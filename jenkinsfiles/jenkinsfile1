@@ -2,7 +2,8 @@ pipeline {
     agent {
         label 'ubuntu_docker'
     }
-    stage("create docker image") {
+    stages {
+        stage("create docker image") {
             steps {
                 echo " ============== start building image =================="
                 dir ('docker/images') {
@@ -10,4 +11,5 @@ pipeline {
                 }
             }
         }
+      }
     }
