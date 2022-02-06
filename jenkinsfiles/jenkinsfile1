@@ -13,7 +13,7 @@ pipeline {
         stage("run container"){
             steps{
             echo " ============== run container =================="
-            sh 'docker run -it --rm --name my-running-app my-php-app'
+            sh 'docker run -it  --name my-running-app my-php-app'
             }
         }
      }
