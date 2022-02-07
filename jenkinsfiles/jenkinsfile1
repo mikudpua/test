@@ -14,7 +14,7 @@ pipeline {
         stage("run container"){
             steps{
             echo " ============== run container =================="
-            sh 'docker run -i --name my-running-app my-php-app'
+            sh 'docker run --name my-running-app my-php-app'
             }
         }
      }
