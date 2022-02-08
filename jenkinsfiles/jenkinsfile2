@@ -1,7 +1,7 @@
 pipeline {
     agent {
-       docker {
-          image ""
+       ubuntu_docker {
+          image "my-running-app"
           args "-v /html:/var/www/html"
        }
     }
