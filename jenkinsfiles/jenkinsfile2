@@ -1,0 +1,14 @@
+pipeline {
+    agent {
+        label 'ubuntu_docker'
+    }
+    stages {
+        stage("create docker image") {
+            steps {
+                echo " ============== add index.html =================="
+                	sh 'touch index.html'
+                  sh 'cat "Hello DEVOPS" >> index.html'
+            }
+         }        
+     }
+ }
