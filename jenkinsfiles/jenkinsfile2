@@ -6,7 +6,7 @@ pipeline {
         stage("create docker image") {
             steps {
                 echo " ============== add index.html =================="
-                    sh 'cat "hello devops" >> index.html'
+                    sh 'echo "Hello" >> index.html'
             }
          }        
      }
