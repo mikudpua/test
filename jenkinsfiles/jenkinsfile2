@@ -2,7 +2,7 @@ pipeline {
     agent {
        docker {
           image ""
-          args "-v /html:/html/www"
+          args "-v /html:/www/html"
        }
     }
 }
